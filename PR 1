@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include "iostream"
+#include "fstream"
+#include "string"
+#include "math.h"
+using namespace std;
+int main()
+{
+	ofstream outfile("data.txt",ios_base::app);
+	
+ int i;
+ cin>>i;
+ if (!outfile)
+		cerr<<"File not found";
+ outfile<<i<<endl;
+ char s[10]={0};
+ sprintf(s,"%x",i);
+ printf("%d\t%s",i,s);
+outfile<<s<<endl;
+
+
+
+
+ cin.get();
+ cin.get();
+			return 0;
+
+}
